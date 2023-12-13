@@ -1,0 +1,11 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+//Joana comprou 23 caixas de leita e gastou um total de 57.5 reais.
+// qual era o preso da caixa de leite?
+    printf ("Joana comprou 23 caixas de leita e gastou um total de 57.5 reais.\n");
+    printf ("O preco de cada caixa de leite e: %2.2f \n", 57.5/23);
+    return 0;
+}
