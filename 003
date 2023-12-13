@@ -1,0 +1,9 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+//Imprima a seguinte mensagem de texto: "Eu quero ser um aluno nota 10"
+int main()
+{
+    printf ("Eu quero ser um aluno nota %d \n",10);
+    return 0;
+}
