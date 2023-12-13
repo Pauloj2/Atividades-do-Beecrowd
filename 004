@@ -1,0 +1,10 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+ //Maria Lem 40 anos e Joã tem 52, mostre na tela a soma da idade deles.
+    printf ("Maria tem 40 anos e Paulo tem 52 \n\n");
+    printf ("A soma da idade deles: %d \n ", 40 + 52 );
+    return 0;
+}
