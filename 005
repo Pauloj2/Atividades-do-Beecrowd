@@ -1,0 +1,10 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+  //3) Marcelo comprou 5 tomates, cada um custou 2.3 reais, quanto ele gastou
+    printf ("Marcelo comprou 5 tomates, cada um custou 2.3 reais \n");
+    printf ("Ele gastou no total de: %1.2f \n", 5 * 2.3);
+    return 0;
+}
