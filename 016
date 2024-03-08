@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main (){
+
+    double valor, ajuste, salariofinal;
+    int percentual;
+
+    scanf("%lf", &valor);
+
+    if (valor <= 400.00){
+       percentual = 15;
+
+    }else if (valor <= 800.00 && valor > 400.00){
+       percentual = 12;
+
+    }else if (valor <= 1200.00 && valor > 800.00){
+       percentual = 10;
+
+    }else if (valor <=2000.00 && valor > 1200.00){
+       percentual = 7;
+
+    }else {
+       percentual = 4;
+    }
+
+    ajuste = valor * (percentual / 100.0);
+    salariofinal = valor + ajuste;
+    printf("Novo salario: %.2lf\n", salariofinal);
+    printf("Reajuste ganho: %.2lf\n", ajuste);
+    printf("Em percentual: %.0d %%\n", percentual);
+
+    return 0;
+}
