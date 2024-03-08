@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main() {
+
+    int horai, minutoi, horaf, minutof;
+    int duracaoh, duracaom, duracaoFinal, duracaoi, duracaof;
+
+    scanf("%d %d %d %d", &horai, &minutoi, &horaf, &minutof);
+
+    duracaoi = (horai * 60) + minutoi;
+    duracaof = (horaf * 60) + minutof;
+    duracaoFinal = duracaof - duracaoi;
+
+    if(duracaof <= duracaoi){
+        duracaoFinal += 24* 60;
+    }
+
+
+    duracaoh = duracaoFinal/60;
+    duracaom = duracaoFinal%60;
+
+
+    printf("O JOGO DUROU %d HORA(S) E %d MINUTO(S)\n", duracaoh, duracaom);
+ return 0;
+}
