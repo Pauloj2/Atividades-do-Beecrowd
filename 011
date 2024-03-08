@@ -1,0 +1,18 @@
+# include <stdio.h>
+
+int main (){
+   int valor, div, resto, mes, dia;
+
+   scanf("%d", &valor);
+
+   div = (valor / 365);
+   resto = valor % 365;
+   mes = resto / 30;
+   dia = resto % 30;
+
+   printf ("%d ano(s)\n", div );
+   printf ("%d mes(es)\n", mes);
+   printf ("%d dia(s)\n", dia);
+
+return 0;
+}
