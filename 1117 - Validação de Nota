@@ -18,5 +18,5 @@ int main () {
     media = soma/2.00;
     printf("media = %.2lf\n", media);
 
-    return 0;
+ return 0;
 }
