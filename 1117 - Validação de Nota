@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main () {
+    int notavalida = 0;
+    double nota1, nota2, media;
+
+    while (notavalida < 2) {
+        scanf("%lf", &nota1);
+
+        if (nota1 < 0 || nota1 > 10){
+            printf ("nota invalida\n");
+        }else {
+           notavalida ++;
+        }
+
+        scanf("lf", &nota2);
+
+        if (nota2 < 0 || nota2 > 10){
+            printf ("nota invalida\n");
+        }else {
+           notavalida ++;
+        }
+    }
+    media = (nota1 + nota2) / 2;
+    printf("media = %.2lf\n", media);
+
+return 0;
+}
