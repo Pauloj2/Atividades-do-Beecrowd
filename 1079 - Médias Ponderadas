@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main () {
+
+    int n, i;
+    double valor1, valor2, valor3, mediap;
+
+    scanf("%d", &n);
+    for (i = 0; i < n; i++){
+      scanf("%lf %lf %lf", &valor1, &valor2, &valor3);
+      mediap = (valor1 * 2 + valor2 * 3 + valor3 * 5) / 10;
+      printf("%.1lf\n", mediap) ;
+    }
+return 0;
+}
