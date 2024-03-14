@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main () {
+
+    int rodadas, A, B;
+
+    while(1){
+        scanf("%d", &rodadas);
+        if(rodadas == 0)
+            break;
+
+        int pai = 0, filho = 0;
+
+        for (int i = 0; i < rodadas; i++){
+            scanf("%d %d", &A, &B);
+            if (A > B)
+                pai ++;
+            else if (B > A)
+                filho ++;
+        }
+        printf ("%d %d\n", pai, filho);
+    }
+
+return 0;
+}
