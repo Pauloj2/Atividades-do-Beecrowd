@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+
+int principal() {
+
+    int distancia;
+    duplo combustível, mídia;
+
+    scanf("%d %lf", &distância, &combustível);
+    mídia = distancia /combustível;
+
+    printf("%.3lf km/l\n", mídia);
+
+retornar 0;
+}
