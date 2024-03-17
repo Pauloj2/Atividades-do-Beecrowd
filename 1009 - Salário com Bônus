@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main () {
+
+    char nome[50];
+    double salariof, totaldevendas;
+    double comissao, totalsalario;
+
+    scanf("%s %lf %lf", nome, &salariof, &totaldevendas);
+    comissao = totaldevendas * 15 / 100;
+    totalsalario = salariof + comissao;
+
+    printf ("TOTAL = R$ %.2lf\n", totalsalario);
+
+
+return 0;
+}
