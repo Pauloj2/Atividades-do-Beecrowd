@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main (){
+
+    int tempo, velocidade, km = 0;
+    double litros = 0;
+    
+    scanf("%d %d", &tempo, &velocidade);
+
+    km = tempo * velocidade;
+    litros = km / 12.0;
+
+    printf("%.3lf\n", litros);
+
+
+return 0;
+}
