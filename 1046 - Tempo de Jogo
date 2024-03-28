@@ -7,7 +7,7 @@ int main () {
 
     scanf("%d %d", &horainicial, &horafinal);
 
-    if(horainicial == 0 && horafinal == 0){
+    if(horainicial == horafinal){
         duracao = 24;
     }
     else if(horainicial < horafinal){
