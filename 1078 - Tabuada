@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main () {
+
+    int num, i, resul = 0;
+
+    scanf("%d", &num);
+
+    for(i=1; i<=10; i++){
+        resul = i * num;
+        printf("%d x %d = %d\n", i, num, resul);
+    }
+
+    return 0;
+}
