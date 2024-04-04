@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+int main () {
+
+    int i, num, cobaias, total = 0;
+    int rato = 0, sapo = 0, coelho = 0;
+    double calcoelho = 0, calratos = 0, calsapos = 0;
+    char tipo;
+
+    scanf("%d", &num);
+
+    for(i=0; i < num; i++){
+        scanf("%d %c", &cobaias, &tipo);
+        total += cobaias;
+        if(tipo == 'S'){
+            sapo += cobaias;
+        }else if(tipo == 'R'){
+            rato += cobaias;
+        }else if(tipo == 'C') {
+            coelho += cobaias;
+        }
+    }
+    calcoelho = (coelho * 100.00)/ total;
+    calratos = (rato * 100.00)/ total;
+    calsapos = (sapo * 100.00)/ total;
+    
+    printf("Total: %d cobaias\n", total);
+    printf("Total de coelhos: %d\n", coelho);
+    printf("Total de ratos: %d\n", rato);
+    printf("Total de sapos: %d\n", sapo);
+    printf("Percentual de coelhos: %.2lf %%\n", calcoelho);
+    printf("Percentual de ratos: %.2lf %%\n", calratos);
+    printf("Percentual de sapos: %.2lf %%\n", calsapos);
+
+    return 0;
+}
