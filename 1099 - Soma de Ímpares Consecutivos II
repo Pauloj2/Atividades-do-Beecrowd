@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main () {
+
+    int num, x, y, i, j;
+    int aux = 0, soma = 0;
+
+    scanf("%d", &num);
+
+    for(i=0; i<num; i++){
+        scanf("%d %d", &x, &y);
+
+        if(x > y){
+            aux = x;
+            x = y;
+            y = aux;
+        }
+        soma = 0;
+
+        for(j=x + 1; j<y; j++){
+            if(j%2 != 0){
+                soma += j;
+            }
+        }
+        printf("%d\n", soma);
+    }
+
+    return 0;
+}
