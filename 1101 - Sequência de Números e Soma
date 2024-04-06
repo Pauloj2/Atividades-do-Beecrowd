@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main () {
+
+    int m, n, i, aux = 0, soma = 0;
+    m = 1;
+    n = 1;
+    while(n > 0 && m > 0){
+        soma = 0;
+        scanf("%d %d", &m, &n);
+        if(m > 0 && n > 0){
+            if (m > n){
+                aux = m;
+                m = n;
+                n = aux;
+            }
+            for(i=m; i<=n; i++){
+            printf("%d ", i);
+            soma += i;
+            }
+        printf("Sum=%d\n", soma);
+        }else{
+            break;
+        }
+    }
+    return 0;
+}
