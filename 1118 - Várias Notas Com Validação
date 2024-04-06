@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main () {
+
+    int decisao = 0;
+    double x, y, div;
+
+    do{
+        do{
+            scanf("%lf", &x);
+            if(x < 0  || x > 10)
+                printf("nota invalida\n");
+        }while(x < 0 || x > 10);
+
+        do{
+            scanf("%lf", &y);
+            if(y < 0 || y > 10)
+                printf("nota invalida\n");
+        } while(y < 0 || y > 10);
+
+        div = (x + y)/2;
+        printf("media = %.2lf\n", div);
+
+        do{
+            printf("novo calculo (1-sim 2-nao)\n");
+            scanf("%d", &decisao);
+        }while(decisao != 1 && decisao != 2);
+
+    }while(decisao != 2);
+
+
+    return 0;
+}
