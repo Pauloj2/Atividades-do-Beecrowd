@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+int main () {
+
+    int inter, gremio, escolha, empate = 0;
+    int pontinter = 0, pontgremio = 0, vezes = 0;
+
+    do{
+        scanf("%d %d", &inter, &gremio);
+        vezes ++;
+        if(inter > gremio){
+            pontinter ++;
+        }else if(gremio > inter){
+            pontgremio ++;
+        }else if(inter == gremio){
+            empate++;
+        }
+        printf("Novo grenal (1-sim 2-nao)\n");
+        scanf("%d", &escolha);
+        if(escolha == 2){
+            break;
+        }
+    }while(escolha != 2);
+    printf("%d grenais\n", vezes);
+    printf("Inter:%d\n", pontinter);
+    printf("Gremio:%d\n", pontgremio);
+    printf("Empates:%d\n", empate);
+    if(pontinter > pontgremio){
+        printf("Inter venceu mais\n");
+    }else if(pontinter < pontgremio){
+        printf("Gremio venceu mais\n");
+    }else if(pontinter == pontgremio){
+        printf("Empate\n");
+    }
+    return 0;
+}
