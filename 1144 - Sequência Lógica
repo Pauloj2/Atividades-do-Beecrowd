@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main () {
+
+    int num, i;
+    int cal = 0, cal2 = 0;
+
+    scanf("%d", &num);
+
+    for(i=0+1; i <= num; i++){
+        cal = i * i;
+        cal2 = i * i * i;
+        printf("%d %d %d\n", i, cal, cal2);
+        printf("%d %d %d\n", i, cal+1, cal2+1);
+        cal = 0;
+        cal2 = 0;
+    }
+    return 0;
+}
