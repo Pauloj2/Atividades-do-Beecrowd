@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main () {
+
+    int num, i, cont = 0;
+    int cal = 0, cal2 = 0;
+    scanf("%d", &num);
+
+   while(num != cont){
+    for(i=0+1; i <= num; i++){
+        cont++;
+        cal = i * i;
+        cal2 = i * cal;
+        printf("%d %d %d\n", i, cal, cal2);
+        cal = 0;
+        cal2 = 0;
+        if(num == cont){
+            break;
+        }
+    }
+   }
+    return 0;
+}
