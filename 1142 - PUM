@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main () {
+
+    int num, i, cont = 0;
+
+    scanf("%d", &num);
+
+   while(num != cont){
+    for(i=0+1; i < 100000; i++){
+        if(num == cont){
+            break;
+        }
+        if(i % 4 != 0){
+            printf("%d ", i);
+        }else {
+            printf("PUM\n");
+            cont++;
+        }
+    }
+   }
+    return 0;
+}
