@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+
+    int t, i, res, acertos = 0;
+
+    scanf("%d", &t);
+
+    for(i=0; i<5; i++){
+        scanf("%d", &res);
+        if(res == t){
+            acertos++;
+        }
+    }
+    printf("%d\n", acertos);
+
+    return 0;
+}
