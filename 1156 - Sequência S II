@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main() {
+
+    int i;
+    double S = 0, num = 1.00;
+
+    for(i=1; i<=39; i+=2){
+        S += i / num;
+        num *= 2.00;
+    }
+    printf("%.2lf\n", S);
+    return 0;
+}
