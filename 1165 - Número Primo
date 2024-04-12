@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main() {
+
+    int n, num, i, j, cont;
+
+    scanf("%d", &n);
+
+    for(i=0; i < n; i++){
+        scanf("%d", &num);
+        cont = 0;
+        for(j=1; j <= num; j++){
+            if(num % j == 0){
+                cont++;
+            }
+        }
+        printf("%d\n", cont);
+        if(cont == 2){
+            printf("%d eh primo\n", num);
+        }else {
+            printf("%d nao eh primo\n", num);
+        }
+    }
+    return 0;
+}
