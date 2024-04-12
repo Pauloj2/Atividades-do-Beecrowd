@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+
+    int i, j = 0, num;
+    int N[1000];
+
+    scanf("%d", &num);
+
+    for(i=0; i<1000; i++){
+        N[i] = j;
+        printf("N[%d] = %d\n", i, N[i]);
+        j++;
+        if (j == num) j = 0;
+    }
+    return 0;
+}
