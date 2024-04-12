@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main() {
+
+    int num, i, j, soma = 0, cont = 0;
+    int x, y;
+
+    scanf("%d", &num);
+
+    for(i=0; i<num; i++){
+        scanf("%d %d", &x, &y);
+        soma = 0;
+        cont = 0;
+
+        for(j=x; cont < y; j++){
+            if(j % 2 != 0){
+                soma += j;
+                cont++;
+            }
+        }
+        printf("%d\n", soma);
+    }
+
+    return 0;
+}
