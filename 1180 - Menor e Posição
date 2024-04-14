@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main () {
+
+    int num, i, menor = 999, posicao = 0;
+
+    scanf("%d", &num);
+
+    int N[num];
+
+    for(i=0; i<num; i++){
+        scanf("%d", &N[i]);
+        if(N[i] < menor){
+            menor = N[i];
+            posicao = i;
+        }
+    }
+    printf("Menor valor: %d\n", menor);
+    printf("Posicao: %d\n", posicao);
+
+    return 0;
+}
