@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+int main () {
+
+    int par[5], impar[5];
+    int contp = 0, conti = 0, num, i, j;
+
+    for(i=0; i<15; i++){
+        scanf("%d", &num);
+        if(num % 2 == 0){
+            par[contp] = num;
+            contp++;
+            if(contp == 5){
+                for(j=0; j<5; j++){
+                    printf("par[%d] = %d\n", j, par[j]);
+                }
+                contp = 0;
+            }
+        }else{
+            impar[conti] = num;
+            conti++;
+            if(conti == 5){
+                for(j=0; j<5; j++){
+                    printf("impar[%d] = %d\n", j, impar[j]);
+                }
+                conti = 0;
+            }
+        }
+    }
+    for(j=0; j<conti; j++){
+        printf("impar[%d] = %d\n", j, impar[j]);
+    }
+    for(j=0; j<contp; j++){
+        printf("par[%d] = %d\n", j, par[j]);
+    }
+
+    return 0;
+}
