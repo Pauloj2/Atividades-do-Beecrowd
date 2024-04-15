@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main () {
+
+    int terceiro, segundo = 0, primeiro = 0;
+
+    scanf("%d", &terceiro);
+
+    segundo = terceiro * 2;
+    primeiro = segundo * 2;
+
+    printf("%d\n", primeiro);
+
+    return 0;
+}
