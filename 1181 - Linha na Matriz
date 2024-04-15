@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int main () {
+
+    double M[12][12], soma = 0;
+    int nlinha, i, j, elementos = 0;
+    char operacao;
+    
+    scanf("%d", &nlinha);
+
+    while(nlinha < 0 || nlinha > 11){
+        scanf("%d", &nlinha);
+    }
+    while(operacao != 'S' && operacao != 'M'){
+        scanf("%c", &operacao);
+    }
+    
+    for(i=0; i<12; i++){
+        for(j=0; j<12; j++){
+            scanf("%lf", &M[i][j]);
+        }
+    }
+    for (j = 0; j < 12; j++) {
+        soma += M[nlinha][j];
+        elementos++;
+    }
+    
+    if (operacao == 'M') {
+        soma /= elementos;
+    }
+    
+    printf("%.1lf\n", soma);
+    
+    return 0;
+}
