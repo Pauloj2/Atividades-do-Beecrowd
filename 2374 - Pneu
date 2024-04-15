@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main () {
+
+    int quant, possui, cal = 0;
+
+    scanf("%d %d", &quant, &possui);
+
+    cal = quant - possui;
+
+    printf("%d\n", cal);
+
+    return 0;
+}
