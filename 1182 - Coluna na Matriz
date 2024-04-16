@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main () {
+
+    int colun, i, j;
+    char operac;
+    double M[12][12], soma = 0;
+
+    scanf("%d", &colun);
+    scanf(" %c", &operac);
+
+    for(i=0; i<12; i++){
+        for(j=0; j<12; j++){
+            scanf("%lf", &M[i][j]);
+        }
+    }
+    for(i=0; i<12; i++){
+        soma += M[i][colun];
+    }
+    if(operac == 'M'){
+        soma /= 12;
+    }
+    printf("%.1lf\n", soma);
+
+    return 0;
+}
