@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main (){
+
+    int num1, num2;
+
+    printf("Digite um valor: ");
+    scanf("%d", &num1);
+    printf("Digite outro valor: ");
+    scanf("%d", &num2);
+    printf("-------------------------------------\n");
+    printf("A soma entre %d e %d e igual a %d.\n", num1, num2, num1+num2);
+    printf("-------------------------------------\n");
+    return 0;
+}
