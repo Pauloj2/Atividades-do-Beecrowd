@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main (){
+
+    double nota1, nota2, media = 0;
+
+    printf("Digite a primeira nota: ");
+    scanf("%lf", &nota1);
+    printf("Digite a segunda nota: ");
+    scanf("%lf", &nota2);
+    media = (nota1 + nota2) / 2;
+    printf("-------------------------------------\n");
+    printf("A media entre %.1lf e %.1lf e igual a %.1lf\n", nota1, nota2, media);
+    printf("-------------------------------------\n");
+
+    return 0;
+}
