@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main () {
+
+    int V = 1, qt50, qt10, qt5, qt1;
+    int resto, cont = 1;
+
+    while(V > 0){
+        scanf("%d", &V);
+        if(V <= 0){
+            break;
+        }
+        qt50 = V / 50;
+        resto = V % 50;
+
+        qt10 = resto / 10;
+        resto = resto % 10;
+
+        qt5 = resto / 5;
+        resto = resto % 5;
+
+        qt1 = resto / 1;
+
+        printf("Teste %d\n", cont);
+        printf("%d %d %d %d\n\n", qt50, qt10, qt5, qt1);
+        cont++;
+    }
+
+return 0;
+}
