@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main () {
+
+    int V, cont = 1;
+
+    scanf("%d", &V);
+
+    while(cont <= V){
+        if(cont < V){
+            printf("Ho ");
+        }else{
+            printf("Ho!\n");
+        }
+        cont++;
+    }
+
+return 0;
+}
