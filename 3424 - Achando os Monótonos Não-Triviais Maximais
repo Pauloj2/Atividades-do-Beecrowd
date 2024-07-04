@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main() {
+    int N, i, cont = 0, contplus = 0;
+
+    scanf("%i", &N);
+    char vet[N + 1];
+
+
+    scanf("%s", vet);
+
+    for(i = 0; i < N; i++) {
+        if(vet[i] == 'a') {
+            contplus++;
+        } else {
+            if (contplus > 1) {
+                cont += contplus;
+            }
+            contplus = 0;
+        }
+    }
+
+    if (contplus > 1) {
+        cont += contplus;
+    }
+
+    printf("%i\n", cont);
+
+    return 0;
+}
+
