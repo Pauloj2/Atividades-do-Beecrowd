@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+    int N;
+
+    scanf("%d", &N);
+
+    int voto[N];
+
+    for (int i = 0; i < N; i++) {
+        scanf("%d", &voto[i]);
+    }
+
+    int maior = -9999;
+    for (int i = 0; i < N; i++) {
+        if (voto[i] > maior) {
+            maior = voto[i];
+        }
+    }
+
+    if (voto[0] >= maior) {
+        printf("S\n");
+    } else {
+        printf("N\n");
+    }
+
+    return 0;
+}
