@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main () {
+
+    int quantlesma, i;
+
+    while (scanf("%d", &quantlesma) != EOF) {
+
+        int maior = 0, vel;
+
+        for(i=0; i<quantlesma; i++){
+            scanf("%d", &vel);
+
+            if(vel > maior){
+                maior = vel;
+            }
+        }
+        if(maior < 10){
+            printf("1\n");
+        }else if(maior >= 10 && maior < 20){
+            printf("2\n");
+        }else if(maior >= 20){
+            printf("3\n");
+        }
+    }
+
+
+    return 0;
+}
