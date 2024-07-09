@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+
+   int a, b, quociente, resto;
+
+   scanf("%d %d", &a, &b);
+
+   quociente = a / b;
+   resto = a - (quociente * b);
+
+   if(resto < 0){
+        int rest, quoc;
+        rest = resto + abs(b);
+        quoc = (a - rest) / b;
+        printf("%d %d\n", quoc, rest);
+   }else{
+        printf("%d %d\n", quociente, resto);
+   }
+
+    return 0;
+}
