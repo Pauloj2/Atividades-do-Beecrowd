@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+
+    int quant, i, menor = 9999, resul = 0;
+
+    scanf("%d", &quant);
+    int vet[quant];
+
+    for(i=1; i<=quant; i++){
+        scanf("%d", &vet[i]);
+        if(vet[i] < menor){
+            menor = vet[i];
+            resul = i;
+        }
+    }
+    printf("%d\n", resul);
+
+    return 0;
+}
