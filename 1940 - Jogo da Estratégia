@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main () {
+
+    int jogador, rodadas;
+
+    scanf("%d %d", &jogador, &rodadas);
+
+    int pontos[jogador];
+
+    for (int i = 0; i < jogador; i++) {
+        pontos[i] = 0;
+    }
+
+    int totalJogadas = jogador * rodadas;
+    int jogada;
+
+    for (int i = 0; i < totalJogadas; i++) {
+        scanf("%d", &jogada);
+        pontos[i % jogador] += jogada;
+    }
+
+    int vencedor = 0;
+    for (int i = 1; i < jogador; i++) {
+        if (pontos[i] >= pontos[vencedor]) {
+            vencedor = i;
+        }
+    }
+
+    printf("%d\n", vencedor + 1);
+
+    return 0;
+}
