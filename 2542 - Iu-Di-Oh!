@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+int main(){
+
+    int n, m, l, cm, cl, a;
+
+    while(scanf("%d", &n) != EOF){
+
+        scanf("%d %d", &m, &l);
+
+        int mar[m][n];
+        for(int i = 0; i < m; i++){
+            for(int j = 0; j < n; j++){
+                scanf("%d", &mar[i][j]);
+            }
+        }
+
+        int leo[l][n];
+        for(int i = 0; i < l; i++){
+            for(int j = 0; j < n; j++){
+                scanf("%d", &leo[i][j]);
+            }
+        }
+
+        scanf("%d %d", &cm, &cl);
+        scanf("%d", &a);
+
+        int x = mar[cm-1][a-1];
+        int y = leo[cl-1][a-1];
+
+        if(x > y){
+            printf("Marcos\n");
+        } else if (x == y){
+            printf("Empate\n");
+        } else {
+            printf("Leonardo\n");
+        }
+    }
+
+    return 0;
+}
