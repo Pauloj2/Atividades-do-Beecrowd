@@ -1,0 +1,51 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define MAX_N 1000
+
+int main() {
+    int matriz[MAX_N][MAX_N];
+    int jaesteve[MAX_N * MAX_N + 1];
+    int ordem, i, j, todos = 0, diagonal1 = 0, diagonal2 = 0;
+    int soma_linha, soma_coluna;
+
+    scanf("%d", &ordem);
+
+    for (i = 0; i < ordem; i++) {
+        soma_linha = 0;
+        for (j = 0; j < ordem; j++) {
+            int davez;
+            scanf("%d", &davez);
+            matriz[i][j] = davez;
+            soma_linha += davez;
+            if (jaesteve[davez] == 0) {
+                jaesteve[davez] = 1;
+                todos++;
+            }
+            if (i == j) diagonal1 += davez;
+            if (i + j + 1 == ordem) diagonal2 += davez;
+        }
+        if (i > 0 && soma_linha != soma_linha) {
+            printf("0\n");
+            return 0;
+        }
+    }
+
+    for (j = 0; j < ordem; j++) {
+        soma_coluna = 0;
+        for (i = 0; i < ordem; i++) {
+            soma_coluna += matriz[i][j];
+        }
+        if (soma_coluna != soma_linha) {
+            printf("0\n");
+            return 0;
+        }
+    }
+
+    if (todos != ordem * ordem || diagonal1 != soma_linha || diagonal2 != soma_linha) {
+        printf("0\n");
+        return 0;
+    }
+
+    printf("%d\n", soma_linha);
+    return 0;
+}
