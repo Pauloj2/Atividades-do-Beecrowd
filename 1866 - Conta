@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main () {
+
+    int quant, num, i;
+
+    scanf("%d", &quant);
+
+    for(i=0; i<quant; i++){
+        scanf("%d", &num);
+        if(num % 2 == 0){
+            printf("0\n");
+        }else{
+            printf("1\n");
+        }
+    }
+
+return 0;
+}
