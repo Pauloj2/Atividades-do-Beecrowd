@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include<string.h>
+
+int main () {
+
+    int quant, i;
+    char deve[100] = "Ciencia da Computacao";
+
+    scanf("%d", &quant);
+
+    for(i=0; i<quant; i++){
+        char curso[100];
+        scanf("%s\n", curso);
+    }
+    printf("%s\n", deve);
+
+return 0;
+}
