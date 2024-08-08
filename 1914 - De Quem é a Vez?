@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include<string.h>
+
+int main () {
+
+    int quant, i;
+
+    scanf("%d", &quant);
+
+    for(i=0; i<quant; i++){
+        char jogador1[100];
+        char escolha1[10];
+        char jogador2[100];
+        char escolha2[10];
+        int soma = 0;
+        scanf("%s %s %s %s", jogador1, escolha1, jogador2, escolha2);
+        int N, M;
+        scanf("%d %d", &N, &M);
+        soma = N + M;
+        if(soma % 2 == 0){
+            if(strcmp(escolha1, "PAR") == 0){
+                printf("%s\n", jogador1);
+            }else{
+                printf("%s\n", jogador2);
+            }
+        }else{
+            if(strcmp(escolha1, "IMPAR") == 0){
+                printf("%s\n", jogador1);
+            }else{
+                printf("%s\n", jogador2);
+            }
+        }
+    }
+
+return 0;
+}
