@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main () {
+
+    int N, L;
+    long long P;
+
+    scanf("%d %d", &N, &L);
+
+    P = (long long)N * L;
+
+    printf("%lld\n", P);
+
+return 0;
+}
