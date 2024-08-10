@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main (){
+
+    int i, num, soma = 0;
+
+    for(i=0; i<4; i++){
+        scanf("%d", &num);
+        soma+= num;
+    }
+    soma = soma - 3;
+    printf("%d\n", soma);
+
+return 0;
+}
