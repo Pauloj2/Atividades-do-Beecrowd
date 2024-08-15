@@ -1,0 +1,66 @@
+#include <stdio.h>
+#include <string.h>
+
+int main () {
+
+    int quant;
+    char palavra[6];
+
+    scanf("%d", &quant);
+
+    while(quant--){
+        int escrit1 = 0, escrit2 = 0, escrit3 = 0;
+        scanf("%s", palavra);
+
+        if(strlen(palavra) == 3){
+            if(palavra[0] == 'o'){
+                escrit1++;
+            }
+            if(palavra[1] == 'n'){
+                escrit1++;
+            }
+            if(palavra[2] == 'e'){
+                escrit1++;
+            }
+            if(escrit1 >= 2){
+                printf("1\n");
+                continue;
+            }
+            if(palavra[0] == 't'){
+                escrit2++;
+            }
+            if(palavra[1] == 'w'){
+                escrit2++;
+            }
+            if(palavra[2] == 'o'){
+                escrit2++;
+            }
+            if(escrit2 >= 2){
+                printf("2\n");
+                continue;
+            }
+        }
+        if(strlen(palavra) == 5){
+            if(palavra[0] == 't'){
+                escrit3++;
+            }
+            if(palavra[1] == 'h'){
+                escrit3++;
+            }
+            if(palavra[2] == 'r'){
+                escrit3++;
+            }
+            if(palavra[3] == 'e'){
+                escrit3++;
+            }
+            if(palavra[4] == 'e'){
+                escrit3++;
+            }
+            if(escrit3 >= 4){
+                printf("3\n");
+                continue;
+            }
+        }
+    }
+return 0;
+}
