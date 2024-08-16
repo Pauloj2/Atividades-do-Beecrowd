@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+int main () {
+
+    int quant;
+    char palavra[100];
+
+    scanf("%d", &quant);
+
+    while (quant < 2 || quant > 99) {
+        scanf("%d", &quant);
+    }
+
+    while(quant--){
+        int num = 0, i, j = 0;
+        char minuscula[100];
+
+
+        scanf("%s", palavra);
+        fflush(stdin);
+
+        num = strlen(palavra);
+
+        for(i=num; i>=0; i--) {
+            if(islower(palavra[i])){
+            minuscula[j++] = palavra[i];
+            }
+        }
+        minuscula[j] = '\0';
+        puts(minuscula);
+    }
+    
+return 0;
+}
