@@ -1,0 +1,46 @@
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+int main() {
+
+    char mens[101];
+    char palavra_maior[101] = "";
+    int maior = 0;
+
+    while(scanf("%[^\n]%*c", mens)) {
+
+        if(mens[0] == '0'){
+            break;
+        }
+
+        int cont = 0;
+        char x;
+        char palavra[101] = "";
+
+        for(int i = 0; i < strlen(mens); i++) {
+
+            if (isalpha(mens[i])) {
+                cont++;
+                x = mens[i];
+                strncat(palavra, &x, 1);
+            }
+
+            if(cont >= maior){
+                maior = cont;
+                strcpy(palavra_maior, palavra);
+            }
+
+            if(isblank(mens[i])){
+                printf("%d-", cont);
+                cont = 0;
+                palavra[0] = '\0'; 
+            }
+        }
+
+        printf("%d\n", cont);
+    }
+    printf("\nThe biggest word: %s\n", palavra_maior);
+
+    return 0;
+}
