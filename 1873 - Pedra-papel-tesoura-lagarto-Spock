@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    int C;
+    scanf("%d", &C);
+
+    while (C--) {
+        char escolhaRajesh[10], escolhaSheldon[10];
+        scanf("%s %s", escolhaRajesh, escolhaSheldon);
+
+        if (strcmp(escolhaRajesh, escolhaSheldon) == 0) {
+            printf("empate\n");
+        } else if (
+            (strcmp(escolhaRajesh, "tesoura") == 0 && (strcmp(escolhaSheldon, "papel") == 0 || strcmp(escolhaSheldon, "lagarto") == 0)) ||
+            (strcmp(escolhaRajesh, "papel") == 0 && (strcmp(escolhaSheldon, "pedra") == 0 || strcmp(escolhaSheldon, "spock") == 0)) ||
+            (strcmp(escolhaRajesh, "pedra") == 0 && (strcmp(escolhaSheldon, "lagarto") == 0 || strcmp(escolhaSheldon, "tesoura") == 0)) ||
+            (strcmp(escolhaRajesh, "lagarto") == 0 && (strcmp(escolhaSheldon, "spock") == 0 || strcmp(escolhaSheldon, "papel") == 0)) ||
+            (strcmp(escolhaRajesh, "spock") == 0 && (strcmp(escolhaSheldon, "tesoura") == 0 || strcmp(escolhaSheldon, "pedra") == 0))
+        ) {
+            printf("rajesh\n");
+        } else {
+            printf("sheldon\n");
+        }
+    }
+
+    return 0;
+}
